@@ -101,6 +101,7 @@ ul, ol{
 }
 
 .menu-list{
+    color: #404bbf;
     display: flex;
     gap: 40px;
 }
