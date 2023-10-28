@@ -53,6 +53,9 @@ ul, ol{
 
 .page-header{
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container{
@@ -125,20 +128,21 @@ ul, ol{
 
 .menu-link::after{
     content: "";
+    position: absolute;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.menu-link:hover::after, .menu-link:focus::after{
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
     height: 4px;
     background-color: #404BBF;
     border-radius: 2px;
+    left: 0;
+    bottom: -1px;
+    display: block;
 }
+
+.menu-link:hover::after, .menu-link:focus::after{
+    width: 100%;
+}
+
 .main-address{
     font-size: 16px;
     font-style: normal;
@@ -165,7 +169,11 @@ ul, ol{
     background-color: #2E2F42;
     padding-top: 188px;
     padding-bottom: 188px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office\ 1.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/img-name.jpg");
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-title{
@@ -213,17 +221,16 @@ ul, ol{
     background-color: #FFFFFF;
 }
 
-.benefits-svg{
-    height: 64px;
-    width: 64px;
-}
 
 .benefits-icon{
-    padding: 24px 100px;
     border-radius: 4px;
     border: 1px solid #8E8F99;
     background: #F4F4FD;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
 }
 
 .benefits-list{
@@ -270,6 +277,9 @@ ul, ol{
 .team-list{
     display: flex;
     gap: 24px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 
@@ -302,24 +312,42 @@ ul, ol{
     margin-bottom: 8px;
 }
 
-.team-social{
+.social-list{
     display: flex;
     gap: 24px;
     justify-content: center;
     align-items: center;
 }
 
+.team-social{
+    justify-content: center;
+    align-items: center;
+}
+
+.social-item{
+    width: 40px;
+    height: 40px;
+}
+
 .team-social-icon{
-    padding: 12px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-icon:hover,
+.team-social-icon:focus
+{
+    background-color: #404bbf;
 }
 
 .team-social-svg{
-    height: 16px;
-    width: 16px;
     fill: #F4F4FD;
-    display: block;
 }
 
 .portfolio{
@@ -349,6 +377,13 @@ ul, ol{
     border: 1px solid #E7E9FC;
     background-color: #FFFFFF;
     width: 360px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .owerflow-wrapper:hover .owerflow,
@@ -368,9 +403,7 @@ ul, ol{
     left: 0;
     width: 100%;
     height: 100%;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 40px;
+    padding: 40px 32px; 
     color:#F4F4FD;
     font-size: 16px;
     font-weight: 400;
@@ -418,6 +451,38 @@ ul, ol{
     line-height: 150%;
     letter-spacing: 0.32px;
     width: 264px;
+}
+
+.footer-conteiner{
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-social{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.footer-first-wraper{
+    margin-right: 120px;
+}
+
+.footer-second-wraper .social-list{
+    gap: 16px;
+}
+
+.footer-icon{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon:hover,
+.footer-icon:focus
+{
+    background-color: #31d0aa;
 }
 
 .logo-footer{
