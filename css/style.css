@@ -113,9 +113,7 @@ ul, ol{
     letter-spacing: 0.32px;
 }
 
-.menu-link:first-child .menu-link{
-    color: #404BBF;
-}
+
 
 .menu-link{
     color: #2e2f42;
@@ -123,7 +121,6 @@ ul, ol{
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 
 .menu-link:hover, .menu-link:focus{
@@ -318,12 +315,10 @@ ul, ol{
     gap: 24px;
     justify-content: center;
     align-items: center;
-}
-
-.team-social{
     justify-content: center;
     align-items: center;
 }
+
 
 .social-item{
     width: 40px;
