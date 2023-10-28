@@ -101,7 +101,6 @@ ul, ol{
 }
 
 .menu-list{
-    color: #404bbf;
     display: flex;
     gap: 40px;
 }
@@ -112,6 +111,10 @@ ul, ol{
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0.32px;
+}
+
+.menu-link:first-child .menu-link{
+    color: #404BBF;
 }
 
 .menu-link{
